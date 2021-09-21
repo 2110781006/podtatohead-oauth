@@ -63,4 +63,4 @@ sudo /opt/oauth2-proxy/oauth2-proxy --github-user="${GITHUB_USER}"  --cookie-sec
 echo "-------------------------------"
 echo "---------FINISHED--------------"
 echo "-------------------------------"
-sudo reboot
+#sudo reboot
