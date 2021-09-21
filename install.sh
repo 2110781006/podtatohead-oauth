@@ -42,7 +42,7 @@ sudo mkdir -p /tmp/oauth2-proxy
 sudo mkdir -p /opt/oauth2-proxy
 
 cd /tmp/oauth2-proxy
-curl -sfL https://github.com/oauth2-proxy/oauth2-proxy/releases/download/v7.1.3/oauth2-proxy-v7.1.3.linux-amd64.tar.gz | tar -xzvf -
+sudo curl -sfL https://github.com/oauth2-proxy/oauth2-proxy/releases/download/v7.1.3/oauth2-proxy-v7.1.3.linux-amd64.tar.gz | tar -xzvf -
 
 sudo mv oauth2-proxy-v7.1.3.linux-amd64/oauth2-proxy /opt/oauth2-proxy/
 
@@ -63,3 +63,4 @@ sudo /opt/oauth2-proxy/oauth2-proxy --github-user="${GITHUB_USER}"  --cookie-sec
 echo "-------------------------------"
 echo "---------FINISHED--------------"
 echo "-------------------------------"
+sudo reboot
