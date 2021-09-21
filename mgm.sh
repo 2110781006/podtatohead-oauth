@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ~
 echo "start git install"
 sudo yum install git -y
 echo "git install finished"
