@@ -25,6 +25,8 @@ Authorization callback URL:
 
 EOF
 
+pause
+
 sudo amazon-linux-extras install epel -y
 sudo yum-config-manager --enable epel
 
