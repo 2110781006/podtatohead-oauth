@@ -32,9 +32,9 @@ sudo mv oauth2-proxy-v7.1.3.linux-amd64/oauth2-proxy /opt/oauth2-proxy/
 
 export COOKIE_SECRET=$(python -c 'import os,base64; print(base64.urlsafe_b64encode(os.urandom(16)).decode())')
 
-export GITHUB_USER=$( echo "Y0t+mPZbCH87A5FTjHpAH/rvaB/3s+FQS7IFmEtdszvKaEdMwjVjmzjCGQPdBSi7 fXf3uBMertBJ6lBE2RUCm39BGRVuANUIzuf6lYYgGsdyW1mdLiHn1UCOr3gAnYWI zn+CZOV3tUceTh2hnG3am9b8B0SQ9VqWqOlfkCHNpfw=" | openssl enc -base64 -d | openssl rsautl -decrypt -inkey ~/podtatohead-oauth/myPrivate.pem)
-export GITHUB_CLIENT_ID=$( echo "HNUWSVtP3GnQX0K4py6+Pu/qR0ogvAuGTAmWY5Io4ypIs3j3EDB8mAgk3NOyKvV1 VYaAEmIgpVt86S5ilU6TwGT0z8Ac2LePaWzOL3/wGOzngM2mfKoVZsAJVYDhx8OK wEIxvBgK2qq1dfTjmOK4P7G8nJvRgec2dC7NtU25tlc=" | openssl enc -base64 -d | openssl rsautl -decrypt -inkey ~/podtatohead-oauth/myPrivate.pem)
-export GITHUB_CLIENT_SECRET=$( echo "U2qnao3bYt1XpH+L5gJ40ZYGeXSjkqIEW+2VRAf9SfhbZARwnKWLhsgHDGyQ77jh BELk4i2MKyevccuBh8E/nwTxXg7HfXJoYqVn+1pKJwv943XINCleHX5HE30eXOV6 8daElOgUOShrjpKiGfeNqSEeOUZWsYgYmStZRQoeIZE=" | openssl enc -base64 -d | openssl rsautl -decrypt -inkey ~/podtatohead-oauth/myPrivate.pem)
+export GITHUB_USER=$( echo "Y0t+mPZbCH87A5FTjHpAH/rvaB/3s+FQS7IFmEtdszvKaEdMwjVjmzjCGQPdBSi7 fXf3uBMertBJ6lBE2RUCm39BGRVuANUIzuf6lYYgGsdyW1mdLiHn1UCOr3gAnYWI zn+CZOV3tUceTh2hnG3am9b8B0SQ9VqWqOlfkCHNpfw=" | openssl enc -base64 -d | openssl rsautl -decrypt -inkey ~/myPrivate.pem)
+export GITHUB_CLIENT_ID=$( echo "HNUWSVtP3GnQX0K4py6+Pu/qR0ogvAuGTAmWY5Io4ypIs3j3EDB8mAgk3NOyKvV1 VYaAEmIgpVt86S5ilU6TwGT0z8Ac2LePaWzOL3/wGOzngM2mfKoVZsAJVYDhx8OK wEIxvBgK2qq1dfTjmOK4P7G8nJvRgec2dC7NtU25tlc=" | openssl enc -base64 -d | openssl rsautl -decrypt -inkey ~/myPrivate.pem)
+export GITHUB_CLIENT_SECRET=$( echo "U2qnao3bYt1XpH+L5gJ40ZYGeXSjkqIEW+2VRAf9SfhbZARwnKWLhsgHDGyQ77jh BELk4i2MKyevccuBh8E/nwTxXg7HfXJoYqVn+1pKJwv943XINCleHX5HE30eXOV6 8daElOgUOShrjpKiGfeNqSEeOUZWsYgYmStZRQoeIZE=" | openssl enc -base64 -d | openssl rsautl -decrypt -inkey ~/myPrivate.pem)
 export PUBLIC_URL=$(curl http://169.254.169.254/latest/meta-data/public-ipv4).nip.io
 echo "-------------------------------"
 echo $GITHUB_USER
