@@ -10,4 +10,3 @@ cd podtatohead-oauth/
 sudo git pull
 echo "git clone finished"
 sudo chmod +x install.sh
-#./install.sh
